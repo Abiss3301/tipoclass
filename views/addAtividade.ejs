@@ -1,0 +1,18 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+
+    <label for="descricao">descricao</label>
+    <input type="text" name="descricao" id="descricao" required placeholder="Digite a descração da atividade."><br>
+
+    <label for="pendente">Data de vencimento</label>
+    <input type="date" name="pendente" id="pendente"><br>
+
+    <label for="tipo_de_atividade">tipo_de_atividade</label>
+    <input type="text" name="tipo_de_atividade" id="tipo_de_atividade"><br>
+
+    <label for="ativ_data">Data da Ativdade</label>
+    <input type="date" name="ativ_data" id="ativ_data"><br>
+
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Listagem de Turmas</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Materia</th>
+            <th>Nome</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+            <th><a href="/addTurma">Adicionar Turma</a></th>
+        </tr>
+        
+        <%Turmas.forEach(function(Turma){%>
+            <tr>
+                <td><%=Turma.materia%></td>
+                <td><%=Turma.nome%></td>
+                <td><a href="/edtturma/<%=Turma._id%>">Editar</a></td>
+                <td><a href="/delturma/<%=Turma._id%>">Delete</a></td>
+            </tr>
+        <% }) %>
+    </table>
+       
+   <ul>
+                <li><a href="/addPessoa">Adicionar Pessoa</a></li>
+                <li><a href="/addAtividade">Adicionar Atividade</a></li>
+                <li><a href="/addMural">Adicionar Mural</a></li>
+                <li><a href="/lstPessoa">Listar Pessoa</a></li>
+                <li><a href="/lstAtividade">Listar Atividade</a></li>
+                <li><a href="/lstMural">Listar Mural</a></li>
+        
+
+   </ul>
+        <%-include('rodape.ejs')%>

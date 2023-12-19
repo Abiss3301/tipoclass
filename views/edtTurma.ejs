@@ -1,0 +1,20 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+
+    <label for="id">Id</label>
+    <input type="text" name="id" id="id" required readonly value="<%= Turma._id%>"><br>
+
+    <label for="materia">Materia</label>
+    <input type="text" name="materia" id="materia" required placeholder="Digite o nome da materia." value="<%=Turma.materia%>"><br>
+    
+
+    <label for="turma_data">Data de criação</label>
+    <input type="date" name="datadecria" id="datadecria" required placeholder="Digite sua postagem" value="<%=Turma.turma_data%>"><br>
+    
+    <label for="nome">Nome</label>
+    <textarea name="nome" id="nome" cols="30" rows="10" value=<%=Turma.nome%>></textarea>
+    
+
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Atividades</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Descrição</th>
+            <th>pendente</th>
+            <th>Tipo de Atividade</th>
+            <th>Data de Atividade</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+            <th><a href="/addAtividade">Adicionar Atividade</a></th>
+        </tr>
+
+        <%Atividade.forEach(function(Atividade){%>
+            <tr>
+                <td><%=Atividade.descricao%></td>
+                <td><%=Atividade.pendente%></td>
+                <td><%=Atividade.tipo_de_atividade%></td>
+                <td><%=Atividade.ativ_data%></td>
+                <td><a href="/edtAtividade/<%=Atividade._id%>">Editar</a></td>
+                <td><a href="/delAtividade/<%=Atividade._id%>">Delete</a></td>
+            </tr>
+        <% }) %>
+    </table>
+
+    <table border="2">
+        <tr>
+            <th>Pessoa</th>
+            <th>Mural</th>
+            <th>Turma</th>
+        </tr>
+
+        <tr>
+            <td><a href="/addPessoa">Adicionar</a></td>
+            <td><a href="/addMural">Adicionar</a></td>
+            <td><a href="/addTurma">Adicionar</a></td>
+            <td><a href="/lstPessoa">Adicionar</a></td>
+            <td><a href="/lstMural">Adicionar</a></td>
+            <td><a href="/lstTurma">Adicionar</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>

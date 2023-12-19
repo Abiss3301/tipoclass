@@ -1,0 +1,33 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+   
+    <label for="id">Id</label>
+    <input type="text" name="id" id="id" required readonly value="<%=Pessoa._id%>"><br>
+
+<label for="nome">Nome</label>
+<input type="text" name="nome" id="nome" required placeholder="Digite seu nome." value="<%=Pessoa.nome%>"><br>
+
+<label for="email">Email</label>
+<input type="email" name="email" id="email" required placeholder="Digite seu email" value="<%=Pessoa.email%>"><br>
+
+<label for="endereco">endereço</label>
+<input type="text" name="endereco" id="endereco" value="<%=Pessoa.endereco%>" ><br>
+
+<label for="cpf">CPF</label>
+<input type="cpf" name="cpf" id="cpf" value="<%=Pessoa.cpf%>" ><br>
+
+<label for="telefone">Telefone</label>
+<input type="telefone" name="telefone" id="telefone" value="<%=Pessoa.telefone%>"><br>
+
+<label for="genero">Genero</label>
+<input type="genero" name="genero" id="genero" value="<%=Pessoa.genero%>"><br>
+
+<label for="idade">idade</label>
+<input type="idade" name="idade" id="idade" value="<%=Pessoa.idade%>"><br>
+
+<label for="senha">Senha</label>
+<input type="password" name="senha" id="senha" ><br>
+
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

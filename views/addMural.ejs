@@ -1,0 +1,22 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+
+    <label for="atividade">Atividade</label>
+    <input type="text" name="atividade" id="atividade" required placeholder="Digite o nome da atividade."><br>
+
+    <label for="postagem">Postagem</label>
+    <input type="text" name="postagem" id="postagem"><br>
+
+    <label for="mural_data">Data de criação</label>
+    <input type="date" name="datamural" id="datamural"><br>
+
+    <label for="Atividade">Atividade</label>
+    <select name="Atividade" id="Atividade">
+        <%Mural.forEach(function(mural){%>
+            <option value="<%=Atividade._id%>"><%=mural.descricao%></option>
+        <% }) %>
+    </select>
+    
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

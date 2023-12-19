@@ -1,0 +1,24 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+
+    <label for="id">Id</label>
+    <input type="text" name="id" id="id" required readonly value="<%= Mural._id%>"><br>
+
+    <label for="atividade">atividade</label>
+    <input type="text" name="atividade" id="atividade" required placeholder="Digite o nome da atividade." value="<%=Mural.Atividade%>"><br>
+    
+
+    <label for="postasgem">postagem</label>
+    <input type="text" name="postagem" id="postagem" required placeholder="Digite sua postagem" value=<%=Mural.postasgem%>><br>
+    
+    <label for="mural_data">mural_data</label>
+    <input type="text" name="mural_data" id="mural_data" required placeholder="Digite seu endereço" value=<%=Mural.mural_data><br>
+    
+    <label for="descricao">descricao</label>
+    <textarea name="descricao" id="descricao" cols="30" rows="10" value=<%=Mural.descricao%>></textarea>
+    
+    
+
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

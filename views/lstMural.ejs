@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Mural</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Postagem</th>
+            <th>Data do mural</th>
+            <th>Atividade</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+            <th><a href="/addMural">Adicionar Mural</a></th>
+        </tr>
+
+        <%Mural.forEach(function(Mural){%>
+            <tr>
+                <td><%=Mural.postagem%></td>
+                <td><%=Mural.mural_data%></td>
+                <td><%=Mural.Atividade%></td>
+                <td><a href="/edtMural/<%=Mural._id%>">Editar</a></td>
+                <td><a href="/delMural/<%=Mural._id%>">Delete</a></td>
+            </tr>
+        <% }) %>
+    </table>
+    
+    <table border="2">
+        <tr>
+            <th>Pessoa</th>
+            <th>Turma</th>
+            <th>Atividade</th>
+        </tr>
+
+        <tr>
+            <td><a href="/addPessoa">Adicionar</a></td>
+            <td><a href="/addTurma">Adicionar</a></td>
+            <td><a href="/addAtividade">Adicionar</a></td>
+            <td><a href="/lstPessoa">listar</a></td>
+            <td><a href="/lstTurma">listar</a></td>
+            <td><a href="/lstAtividade">listar</a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+
+    <label for="materia">Materia</label>
+    <input type="text" name="materia" id="materia" required placeholder="Digite o nome da materia."><br>
+
+    <label for="turma_data">Data de criação</label>
+    <input type="date" name="datadecria" id="datadecria"><br>
+
+    <label for="pessoa">Pessoa</label>
+    <select name="Pessoa" id="Pessoa">
+        <%Pessoa.forEach(function(pessoa){%>
+            <option value="<%=pessoa._id%>"><%=pessoa.nome%></option>
+        <% }) %>
+    </select>
+
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

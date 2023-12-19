@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Pessoas</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cpf</th>
+            <th>Telefone</th>
+            <th>Genero</th>
+            <th>Idade</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+            <th><a href="/addPessoa">Adicionar Pessoa</a></th>
+        </tr>
+
+
+        <%Pessoa.forEach(function(Pessoa){%>
+            <tr>
+                <td><%=Pessoa.nome%></td>
+                <td><%=Pessoa.email%></td>
+                <td><%=Pessoa.cpf%></td>
+                <td><%=Pessoa.telefone%></td>
+                <td><%=Pessoa.genero%></td>
+                <td><%=Pessoa.idade%></td>
+                <td><a href="/edtPessoa/<%=Pessoa._id%>">Editar</a></td>
+                <td><a href="/delPessoa/<%=Pessoa._id%>">Delete</a></td>
+
+
+            </tr>
+        <% }) %>
+    </table>
+
+    <table border="2">
+        <tr>
+            <th>Atividade</th>
+            <th>Turma</th>
+            <th>Mural</th>
+        </tr>
+
+        <tr>
+            <td><a href="/addAtividade">Adicionar</a></td>
+            <td><a href="/addTurma">Adicionar</a></td>
+            <td><a href="/addMural">Adicionar</a></td>
+            <td><a href="/lstAtividade">Adicionar</a></td>
+            <td><a href="/lstTurma">Adicionar</a></td>
+            <td><a href="/lstMural">Adicionar</a></td>
+        </tr>
+    </table>
+</body>
+</html>
